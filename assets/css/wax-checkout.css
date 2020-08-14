@@ -1,0 +1,139 @@
+#wax-qr {
+  padding-top: 20px; }
+
+#wax-qr > img {
+  float: none !important;
+  width: 60%;
+  height: auto;
+  margin: 0 auto;
+  max-height: none !important; }
+
+#wax-qr-desc {
+  padding-top: 20px; }
+
+#wax-amount-wrapper {
+  clear: both;
+  cursor: pointer; }
+
+/*Ads the icon after NEM amount for copy*/
+#wax-amount-wrapper:after {
+  content: url("../img/copy.png");
+  padding-left: 5px; }
+
+#wax-address-wrapper {
+  clear: both;
+  cursor: pointer; }
+
+/*Ads the icon after NEM address for copy*/
+#wax-address-wrapper:after {
+  content: url("../img/copy.png");
+  padding-left: 5px; }
+
+#wax-ref-wrapper {
+  clear: both;
+  cursor: pointer; }
+
+/*Ads the icon after NEM address for copy*/
+#wax-ref-wrapper:after {
+  content: url("../img/copy.png");
+  padding-left: 5px; }
+
+.wax-payment-desc-row {
+  display: block;
+  margin-bottom: 5px; }
+
+.wax-label-for {
+  font-weight: 400;
+  font-size: 14px; }
+
+.wax-label {
+  float: right;
+  font-size: 16px; }
+
+#wax-pay-button {
+  align-items: flex-start;
+  background-attachment: scroll;
+  background-clip: border-box;
+  background-color: #eeeeee;
+  background-image: none;
+  background-origin: padding-box;
+  background-position-x: 0%;
+  background-position-y: 0%;
+  background-size: auto;
+  border-bottom-color: #eeeeee;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-style: none;
+  border-bottom-width: 0px;
+  border-image-outset: 0;
+  border-image-repeat: stretch;
+  border-image-slice: 100%;
+  border-image-source: none;
+  border-image-width: 1;
+  border-left-color: #eeeeee;
+  border-left-style: none;
+  border-left-width: 0px;
+  border-right-color: #eeeeee;
+  border-right-style: none;
+  border-right-width: 0px;
+  border-top-color: #eeeeee;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-top-style: none;
+  border-top-width: 0px;
+  box-sizing: border-box;
+  color: #333333;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Source Sans Pro", HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-size: 16px;
+  font-stretch: 100%;
+  font-style: normal;
+  font-variant-caps: normal;
+  font-variant-east-asian: normal;
+  font-variant-ligatures: normal;
+  font-variant-numeric: normal;
+  font-weight: 600;
+  min-height: 44.75px;
+  letter-spacing: normal;
+  line-height: 25.888px;
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+  margin-bottom: 20px;
+  margin-left: 0px;
+  margin-right: 0px;
+  margin-top: 0px;
+  overflow-wrap: break-word;
+  overflow-x: visible;
+  overflow-y: visible;
+  padding-bottom: 9.88875px;
+  padding-left: 22.652px;
+  padding-right: 22.652px;
+  padding-top: 9.88875px;
+  text-align: center;
+  text-decoration-color: #333333;
+  text-decoration-line: none;
+  text-decoration-style: solid;
+  text-indent: 0px;
+  text-rendering: optimizelegibility;
+  text-shadow: none;
+  text-size-adjust: 100%;
+  text-transform: none;
+  width: 100%;
+  word-spacing: 0px;
+  writing-mode: horizontal-tb;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-border-image: none; }
+
+#wax-pay-button:hover {
+  background-color: #d5d5d5;
+  border-color: #d5d5d5;
+  color: #333333; }
+
+#wax-pay-button:focus {
+  outline-color: #96588a;
+  outline: 2px solid #96588a; }
+
+/*# sourceMappingURL=maps/wax-checkout.css.map */
