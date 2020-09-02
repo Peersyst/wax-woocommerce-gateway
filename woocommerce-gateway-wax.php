@@ -1,11 +1,11 @@
 <?php
 /*
- * Plugin Name: WooCommerce Wax Gateway
+ * Plugin Name: Payment Gateway for Wax with WooCommerce
  * Plugin URI: https://wordpress.org/plugins/woocommerce-gateway-wax/
  * Description: Take WAX coin payments inn your store.
- * Author: Peersyst technologies
+ * Author: EOS Barcelona
  * Author URI: 
- * Version:
+ * Version: 1.0.0
  * Text Domain: woocommerce-gateway-wax
  * Domain Path: /languages
  *
@@ -13,7 +13,7 @@
  * License: GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  *
- * Copyright 2020 Peersyst technologies
+ * Copyright 2020 EOS Barcelona
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
