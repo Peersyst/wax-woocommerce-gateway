@@ -1,6 +1,6 @@
 <?php
 
-class WaxApi {
+class WC_WaxApi {
 
 	private static $instance;
 
@@ -50,8 +50,8 @@ class WaxApi {
 	}
 
 	public static function get_latest_transactions($account, $server) {
-		$transactions = WaxApi::get_latest_100_transactions($account, $server);
-		return WaxApi::transform_transactions($transactions);
+		$transactions = WC_WaxApi::get_latest_100_transactions($account, $server);
+		return WC_WaxApi::transform_transactions($transactions);
 	}
 
 }

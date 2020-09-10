@@ -57,7 +57,7 @@ class WC_Gateway_Wax extends WC_Payment_Gateway {
      */
     public function payment_fields() {
         $user = wp_get_current_user();
-        $wax_amount = Wax_Currency::get_wax_amount($this->get_order_total(), strtoupper(get_woocommerce_currency()));
+        $wax_amount = WC_Wax_Currency::get_wax_amount($this->get_order_total(), strtoupper(get_woocommerce_currency()));
 
         //Todo: Lock amount for 5 minutes
         WC()->session->set('wax_amount', $wax_amount);

@@ -128,8 +128,8 @@ if ( ! class_exists( 'WC_Wax' ) ) {
 			 * Include gateway class
 			 * */
 			include_once ( plugin_basename('includes/class-wc-gateway-wax.php'));
-			include_once ( plugin_basename('includes/class-wax-ajax.php'));
-			include_once ( plugin_basename('includes/class-wax-currency.php'));
+			include_once ( plugin_basename('includes/class-wc-wax-ajax.php'));
+			include_once ( plugin_basename('includes/class-wc-wax-currency.php'));
 
 			/*
 			 * Need make woocommerce aware of the Gateway class
@@ -179,14 +179,14 @@ if ( ! class_exists( 'WC_Wax' ) ) {
 			$wax_options = get_option('woocommerce_wax_settings');
 			switch ($wax_options['prices_in_wax']) {
 				case "both":
-					$wax_amout = round(Wax_Currency::get_wax_amount($price, $currency), 2, PHP_ROUND_HALF_UP);
+					$wax_amout = round(WC_Wax_Currency::get_wax_amount($price, $currency), 2, PHP_ROUND_HALF_UP);
 					if($wax_amout){
 						$new_price_string = $price_string.'&nbsp;||&nbsp;<span class="woocommerce-Price-amount amount">'.$wax_amout.'&nbsp;</span><span class="woocommerce-Price-currencySymbol">WAX</span>';
 						return $new_price_string;
 					}
 					break;
 				case "only":
-					$wax_amout = round(Wax_Currency::get_wax_amount($price, $currency), 2, PHP_ROUND_HALF_UP);
+					$wax_amout = round(WC_Wax_Currency::get_wax_amount($price, $currency), 2, PHP_ROUND_HALF_UP);
 					if($wax_amout){
 						$new_price_string = '<span class="woocommerce-Price-amount amount">'.$wax_amout.'&nbsp;</span><span class="woocommerce-Price-currencySymbol">WAX</span>';
 						return $new_price_string;

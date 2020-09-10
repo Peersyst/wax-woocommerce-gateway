@@ -1,7 +1,7 @@
 <?php
 
 
-class Wax_Ajax {
+class WC_Wax_Ajax {
 
 	private static $instance;
 
@@ -93,7 +93,7 @@ class Wax_Ajax {
 	    $currency = "EUR";
 
 
-	    $callback = Wax_Currency::get_wax_amount($amount, $currency);
+	    $callback = WC_Wax_Currency::get_wax_amount($amount, $currency);
 		if($callback){
 			self::send($callback);
 		}
@@ -122,14 +122,14 @@ class Wax_Ajax {
 		$amount = WC()->cart->total;
 		$currency = strtoupper( get_woocommerce_currency() );
 		//Todo: If too high difference becuase of price volatility, add notice to lock in new amount. The customer has probably waited to long.
-		$wax_amout = Wax_Currency::get_wax_amount($amount, $currency);
+		$wax_amout = WC_Wax_Currency::get_wax_amount($amount, $currency);
 		$wax_amount_locked = WC()->session->get('wax_amount');
 		//Remove the currency
 		$wax_amount_locked = floatval($wax_amount_locked);
 		//Todo: If locked and new amount diff to much, we can call a refresh.
 
 		//Get latest transactions
-		include_once ('class-wax-api.php');
+		include_once ('class-wc-wax-api.php');
 		$transactions = WaxApi::get_latest_transactions($wax_address, $server);
 
 		if(!$transactions){
@@ -157,7 +157,7 @@ class Wax_Ajax {
 			//if we also do only match on amount we try it here, but then the amount must be axactly.
 			if(!$message_amount_match && $match_amount){
 				$wax_amount_lock_check = round($wax_amount_locked,$decimal_amount_precision);
-                $wax_amount_transaction_check = round($t->amount,$decimal_amount_precision);
+				$wax_amount_transaction_check = round($t->amount,$decimal_amount_precision);
 				if( $wax_amount_lock_check ===  $wax_amount_transaction_check ){
 					$amount_match = true;
 					$matched_transaction = $t;
@@ -230,4 +230,4 @@ class Wax_Ajax {
 
 }// End class AJAX
 
-Wax_Ajax::get_instance();
+WC_Wax_Ajax::get_instance();

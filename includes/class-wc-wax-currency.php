@@ -1,6 +1,6 @@
 <?php
 
-class Wax_Currency {
+class WC_Wax_Currency {
 
 	private static $instance;
 
@@ -56,4 +56,4 @@ class Wax_Currency {
 	}
 
 }
-Wax_Currency::get_instance();
+WC_Wax_Currency::get_instance();
