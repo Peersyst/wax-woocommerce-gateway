@@ -38,7 +38,7 @@ class WC_Wax_Ajax {
             if (!WP_DEBUG || (WP_DEBUG && !WP_DEBUG_DISPLAY)) {
                 @ini_set('display_errors', 0);
             }
-            $GLOBALS['wpdb']->hide_errors();
+            //$GLOBALS['wpdb']->hide_errors();
         }
     }
 
