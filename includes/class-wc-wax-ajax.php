@@ -130,7 +130,7 @@ class WC_Wax_Ajax {
 
 		//Get latest transactions
 		include_once ('class-wc-wax-api.php');
-		$transactions = WaxApi::get_latest_transactions($wax_address, $server);
+		$transactions = WC_WaxApi::get_latest_transactions($wax_address, $server);
 
 		if(!$transactions){
 			self::error("No transactions from WAX");
